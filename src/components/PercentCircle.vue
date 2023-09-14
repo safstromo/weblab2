@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { tasks } from './Task.ts';
-import type { Task } from './Task.ts';
+import { tasks } from './Task';
+import type { Task } from './Task';
 
 const percentDone = computed(() => {
   const done = tasks.value.filter((task: Task) => task.isDone).length;
