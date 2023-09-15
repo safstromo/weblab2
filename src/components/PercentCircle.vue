@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { tasks } from './Task';
-import type { Task } from './Task';
+import { tasklist } from './Task';
+import type { TaskList } from './Task';
 
 const percentDone = computed(() => {
-  const done = tasks.value.filter((task: Task) => task.isDone).length;
-  const percent = (done / tasks.value.length) * 100;
+  const done = tasklist.value.filter((task: TaskList) => task.isDone).length;
+  const percent = (done / tasklist.value.length) * 100;
   return percent.toFixed(0);
 });
 </script>
@@ -16,5 +16,4 @@ const percentDone = computed(() => {
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
