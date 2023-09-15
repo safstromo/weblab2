@@ -11,20 +11,10 @@ const percentDone = computed(() => {
 </script>
 
 <template>
-  <div class="circle">
-    <h2>{{ percentDone }}%</h2>
+  <div class="flex items-center justify-center w-60 h-60 rounded-full bg-stone-500 drop-shadow-xl m-2">
+    <h2 class="text-3xl">{{ percentDone }}%</h2>
   </div>
 </template>
 
 <style scoped>
-.circle {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 </style>

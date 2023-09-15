@@ -35,8 +35,13 @@ function addTask() {
 
 <style scoped>
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @apply flex flex-col items-center justify-center ;
+}
+input, textarea{
+  @apply  w-full m-1 px-4 py-2 block border border-stone-500 rounded-md shadow-sm ;
+
+}
+button{
+  @apply w-40 mt-1 py-2 rounded-full bg-stone-300 transition ease-in-out delay-75 hover:-translate-y-1 hover:bg-stone-500 active:translate-y-1 drop-shadow-md; 
 }
 </style>
