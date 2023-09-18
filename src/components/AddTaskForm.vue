@@ -25,7 +25,7 @@ function addTask() {
 </script>
 
 <template>
-  <div class="fixed mx-auto inset-x-0 z-20 w-96 p-4 overflow-y-auto md:inset-0 h-96 bg-stone-500 rounded-md">
+  <div class="fixed border  mx-auto inset-x-0 z-20 w-96 p-4 md:inset-0 h-96 bg-stone-500 rounded-md">
     <form class="flex flex-col items-center justfy-center">
       <input type="text" v-model="title" maxlength="18" placeholder="Title" />
       <textarea v-model="todo" class="h-60" maxlength="200" placeholder="Add stuff to do"></textarea>
