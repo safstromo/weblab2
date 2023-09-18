@@ -12,8 +12,9 @@ const percentDone = computed(() => {
 
 <template>
     <div
-        class="flex items-center justify-center w-60 h-60 rounded-full bg-stone-500 drop-shadow-xl m-2"
+        class="flex flex-col items-center justify-center w-60 h-60 rounded-full bg-stone-500 drop-shadow-xl m-2"
     >
+        <h2 class="text-2xl">Tasks done</h2>
         <h2 class="text-3xl">{{ percentDone }}%</h2>
     </div>
 </template>

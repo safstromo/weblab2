@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { tasks } from './Task';
-import type { TaskList, Task } from './Task';
+import type { Task } from './Task';
 const taskProp = defineProps(['taskId']);
 const task: Task = tasks.value.find((task) => task.id === taskProp.taskId)!;
 // console.log(task);

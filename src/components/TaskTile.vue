@@ -11,7 +11,7 @@ function deleteTask(taskToDelete: Task) {
 <template>
     <ul class="flex flex-row justify-center flex-wrap w-full">
         <li
-            class="box-border m-2 w-80 bg-stone-500 rounded-md drop-shadow-lg"
+            class="box-border flex m-2 w-80 bg-stone-500 rounded-md drop-shadow-lg"
             v-for="(task, index) in tasks"
             :key="index"
         >
