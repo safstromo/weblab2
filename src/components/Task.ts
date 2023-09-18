@@ -16,4 +16,4 @@ export type Task = {
   title: string;
   todo: string;
   isDone: Boolean;
-};
+}; 

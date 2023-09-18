@@ -2,13 +2,14 @@
 import TaskTile from '../components/TaskTile.vue';
 import PercentCircle from '../components/PercentCircle.vue';
 import AddTask from '../components/AddTask.vue';
-
+import { tasklist } from '../components/Task';
+import { ref } from 'vue';
+const tasks = ref(tasklist);
 
 </script>
 <template>
   <div class="flex flex-col justify-items-center items-center p-2">
-    <div class="bg-gray-50">Hello</div>
-    <PercentCircle />
+    <PercentCircle :tasks="tasks"/>
     <TaskTile />
     <!-- sätt probs för att veta vilken task -->
     <AddTask />

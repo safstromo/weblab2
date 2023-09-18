@@ -14,7 +14,6 @@ function deleteTask(task: TaskList) {
       <router-link :to="{ name: 'task', params: { taskId: task.id } }">
         <div class="textbox flex flex-col items-center">
           <h2 class="text-xl underline">{{ task.title }}</h2>
-          <!-- <p class="text-sm text-center">{{ task.todo }}</p> -->
         </div>
       </router-link>
       <input class="checkbox w-8 m-2" type="checkbox" v-model="task.isDone" />

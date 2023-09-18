@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from 'vue-router'
-import TaskTile from '../components/TaskTile.vue'
-const route = useRoute();
+import SingleTask from '../components/SingleTask.vue'
+const task = useRoute().params;
+
 </script>
 <template>
   <div>
-    Test {{route.params.id}} 
-    <TaskTile />
+    <SingleTask :taskId="task.taskId"/>
   </div>
 </template>
 <style scoped>
