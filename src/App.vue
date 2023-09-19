@@ -3,8 +3,20 @@ import { tasks } from './components/Task';
 import { RouterLink } from 'vue-router';
 import AddTaskModal from './components/AddTaskModal.vue';
 import DarkModeButton from './components/DarkModeButton.vue';
+import { useDark } from '@vueuse/core';
+import { computed, ref } from 'vue';
+const isDark = ref(useDark());
 
 const storage = localStorage.getItem('todo');
+
+const logo = computed(() => {
+  if (isDark.value) {
+    return '/src/assets/logo_white.png';
+  } else {
+    return '/src/assets/logo_black.svg';
+  }
+});
+console.log(logo);
 
 if (storage) {
   tasks.value = JSON.parse(storage);
@@ -13,9 +25,9 @@ if (storage) {
 
 <template>
   <header>
-    <router-link to="/"><img class="w-24" src="./assets/L3oZlx01.svg" alt="" /></router-link>
+    <router-link to="/" class="w-24"><img class="w-24" :src="logo" alt="logo" /></router-link>
     <AddTaskModal />
-    <DarkModeButton/>
+    <DarkModeButton />
   </header>
   <router-view></router-view>
 </template>
