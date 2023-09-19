@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { tasks } from './Task';
-import type { Task } from './Task';
 import { RouterLink } from 'vue-router';
+import { useTaskStore } from '@/stores/TaskStore';
+import type { Task } from '@/stores/TaskStore';
+
+const taskStore = useTaskStore();
 
 function deleteTask(taskToDelete: Task) {
-    tasks.value = tasks.value.filter((t) => t !== taskToDelete);
-    localStorage.setItem('todo', JSON.stringify(tasks.value));
+    taskStore.tasks = taskStore.tasks.filter((t) => t !== taskToDelete);
+    localStorage.setItem('todo', JSON.stringify(taskStore.tasks));
 }
 </script>
 <template>
     <ul class="flex flex-row justify-center flex-wrap w-full">
         <li
             class="box-border flex m-2 w-80 bg-white border border-black rounded-md drop-shadow-lg dark:bg-gray-900 dark:text-white"
-            v-for="(task, index) in tasks"
+            v-for="(task, index) in taskStore.tasks"
             :key="index"
         >
             <router-link :to="{ name: 'task', params: { taskId: task.id } }">

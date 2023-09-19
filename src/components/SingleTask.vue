@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { tasks } from './Task';
-import type { Task } from './Task';
+import { useTaskStore } from '@/stores/TaskStore';
+import type { Task } from '@/stores/TaskStore';
+
+const taskStore = useTaskStore();
+
 const taskProp = defineProps(['taskId']);
-const task: Task = tasks.value.find((task) => task.id === taskProp.taskId)!;
+const task: Task = taskStore.tasks.find((task) => task.id === taskProp.taskId)!;
 </script>
 <template>
-    <div class="container mx-auto flex flex-col items-center dark:text-white">
+    <div class="container p-5 mx-auto flex flex-col items-center dark:text-white">
         <h2 class="text-3xl underline m-5">{{ task?.title }}</h2>
 
         <p class="text-md text-center">{{ task.todo }}</p>

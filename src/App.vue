@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { tasks } from './components/Task';
+// import { tasks } from './components/Task';
 import { RouterLink } from 'vue-router';
 import AddTaskModal from './components/AddTaskModal.vue';
 import DarkModeButton from './components/DarkModeButton.vue';
 import { useDark } from '@vueuse/core';
 import { computed, ref } from 'vue';
+import { useTaskStore } from '@/stores/TaskStore';
+
+const taskStore = useTaskStore();
 const isDark = ref(useDark());
 
 const storage = localStorage.getItem('todo');
@@ -18,7 +21,7 @@ const logo = computed(() => {
 });
 
 if (storage) {
-    tasks.value = JSON.parse(storage);
+    taskStore.tasks = JSON.parse(storage);
 }
 </script>
 

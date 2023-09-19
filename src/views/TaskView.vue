@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRouter, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import SingleTask from '../components/SingleTask.vue';
 const task = useRoute().params;
 </script>

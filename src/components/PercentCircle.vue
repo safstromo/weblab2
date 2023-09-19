@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { tasks } from './Task';
-import type { Task } from './Task';
+import { useTaskStore } from '@/stores/TaskStore';
+import type { Task } from '@/stores/TaskStore';
+
+const taskStore = useTaskStore();
 
 const percentDone = computed(() => {
-    if (tasks.value.length === 0) return 100;
-    const done = tasks.value.filter((task: Task) => task.isDone).length;
-    const percent = (done / tasks.value.length) * 100;
+    if (taskStore.tasks.length === 0) return 100;
+    const done = taskStore.tasks.filter((task: Task) => task.isDone).length;
+    const percent = (done / taskStore.tasks.length) * 100;
     return percent.toFixed(0);
 });
 </script>

@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { tasks } from './Task';
-import type { Task } from './Task';
 import { ref } from 'vue';
 import { v4 as uuidv4 } from 'uuid';
+import { useTaskStore } from '@/stores/TaskStore';
+import type { Task } from '@/stores/TaskStore';
+
+const taskStore = useTaskStore();
 const emit = defineEmits(['taskAdded']);
 const title = ref('');
 const todo = ref('');
@@ -15,8 +17,8 @@ function addTask() {
         todo: todo.value
     };
 
-    tasks.value.push(newTask);
-    localStorage.setItem('todo', JSON.stringify(tasks.value));
+    taskStore.tasks.push(newTask);
+    localStorage.setItem('todo', JSON.stringify(taskStore.tasks));
 
     title.value = '';
     todo.value = '';
