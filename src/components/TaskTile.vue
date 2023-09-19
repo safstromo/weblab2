@@ -17,7 +17,7 @@ function deleteTask(taskToDelete: Task) {
         >
             <router-link :to="{ name: 'task', params: { taskId: task.id } }">
                 <div class="textbox flex flex-col items-center">
-                    <h2 class="m-2 text-xl underline overflow-hidden ">{{ task.title }}</h2>
+                    <h2 class="m-2 text-xl underline overflow-hidden">{{ task.title }}</h2>
                     <p class="m-2 text-sm h-32 text-center overflow-hidden">{{ task.todo }}</p>
                 </div>
             </router-link>

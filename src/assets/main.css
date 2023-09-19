@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  @apply bg-white dark:bg-gray-800
+body {
+    @apply bg-white dark:bg-gray-800;
 }

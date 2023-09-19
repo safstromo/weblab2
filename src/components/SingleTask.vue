@@ -6,13 +6,11 @@ const task: Task = tasks.value.find((task) => task.id === taskProp.taskId)!;
 </script>
 <template>
     <div class="container mx-auto flex flex-col items-center dark:text-white">
-        <h2 class="text-3xl underline m-5 ">{{ task?.title }}</h2>
+        <h2 class="text-3xl underline m-5">{{ task?.title }}</h2>
 
         <p class="text-md text-center">{{ task.todo }}</p>
 
-    <h3 class="text-lg underline pt-8">
-    Mark as done
-    </h3>
+        <h3 class="text-lg underline pt-8">Mark as done</h3>
         <input class="checkbox w-10 h-10 m-2 shadow-md" type="checkbox" v-model="task.isDone" />
     </div>
 </template>
