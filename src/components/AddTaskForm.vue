@@ -25,12 +25,12 @@ function addTask() {
 </script>
 
 <template>
-  <div class="fixed border  mx-auto inset-x-0 z-20 w-96 p-4 md:inset-0 h-96 bg-stone-500 rounded-md">
+  <div class="fixed border border-black mx-auto inset-x-0 z-20 w-96 p-4 md:inset-0 h-96 bg-white rounded-md dark:bg-gray-900 dark:text-white" >
     <form class="flex flex-col items-center justfy-center">
-      <input type="text" v-model="title" maxlength="18" placeholder="Title" />
-      <textarea v-model="todo" class="h-60" maxlength="200" placeholder="Add stuff to do"></textarea>
+      <input class="dark:bg-gray-800 " type="text" v-model="title" placeholder="Title" />
+      <textarea v-model="todo" class=" h-60 dark:bg-gray-800" placeholder="Add stuff to do"></textarea>
       <button @click.prevent="addTask"
-        class="w-40 mt-1 py-2 rounded-full bg-stone-300 transition ease-in-out delay-75 hover:-translate-y-1 hover:bg-stone-500 active:translate-y-1 drop-shadow-md">
+        class="w-40 mt-1 py-2 rounded-full bg-white transition ease-in-out delay-75 hover:-translate-y-1 hover:bg-stone-500 active:translate-y-1 drop-shadow-md dark:bg-gray-800 dark:hover:bg-gray-600 border-black border">
         Add task
       </button>
     </form>
