@@ -16,7 +16,6 @@ const logo = computed(() => {
     return '/src/assets/logo_black.svg';
   }
 });
-console.log(logo);
 
 if (storage) {
   tasks.value = JSON.parse(storage);
