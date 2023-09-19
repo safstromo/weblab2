@@ -22,7 +22,7 @@ const taskStore = useTaskStore();
                 for="toggleDone"
                 class="toggle-label block overflow-hidden h-10 rounded-md bg-white border shadow-md cursor-pointer pt-1 p-1 text-lg text-center dark:border-none"
             >
-                <p>Done &nbsp;ALL&nbsp;</p>
+                <p>Todo &nbsp;ALL&nbsp;</p>
             </label>
         </div>
     </div>

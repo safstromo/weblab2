@@ -4,7 +4,7 @@ const isDark = useDark();
 const toggleDark = useToggle(isDark);
 </script>
 <template>
-    <div class="fixed top-2 right-8">
+    <div class="absolute top-2 right-8">
         <label for="toggle" class="text-xs dark:text-white pr-2">Toggle Darkmode.</label>
         <div
             class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"

@@ -14,7 +14,7 @@ function deleteTask(taskToDelete: Task) {
     <ul class="flex flex-row justify-center flex-wrap w-full">
         <li
             v-show="!taskStore.filterTasks"
-            class="box-border flex m-2 w-80 bg-white border border-black rounded-md drop-shadow-lg dark:bg-gray-900 dark:text-white"
+            class="box-border flex m-2 w-80 bg-white border border-black rounded-md shadow-md dark:bg-gray-900 dark:text-white dark:shadow-amber-600"
             v-for="task in taskStore.tasks"
             :key="task.id"
         >
@@ -33,7 +33,7 @@ function deleteTask(taskToDelete: Task) {
             </button>
         </li>
         <li
-            class="box-border flex m-2 w-80 bg-white border border-black rounded-md drop-shadow-lg dark:bg-gray-900 dark:text-white"
+            class="box-border flex m-2 w-80 bg-white border border-black rounded-md shadow-md dark:bg-gray-900 dark:text-white dark:shadow-amber-600"
             v-show="taskStore.filterTasks"
             v-for="task in taskStore.getIncomplete"
             :key="task.id"
