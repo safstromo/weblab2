@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// import { tasks } from './components/Task';
 import { RouterLink } from 'vue-router';
 import AddTaskModal from './components/AddTaskModal.vue';
 import DarkModeButton from './components/DarkModeButton.vue';
