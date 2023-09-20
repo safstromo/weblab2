@@ -15,7 +15,7 @@ const toggleDark = useToggle(isDark);
                 type="checkbox"
                 name="toggle"
                 id="toggle"
-                class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-gray-400 border-4 appearance-none cursor-pointer dark:bg-white"
+                class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-gray-400 border-4 appearance-none cursor-pointer dark:bg-gray-800"
             />
             <label
                 for="toggle"
@@ -26,13 +26,11 @@ const toggleDark = useToggle(isDark);
 </template>
 <style scoped>
 .toggle-checkbox:checked {
-    @apply: right-0 border-green-400;
     right: 0;
-    border-color: #68d391;
+    border-color: #ffb300;
 }
 
 .toggle-checkbox:checked + .toggle-label {
-    @apply: bg-green-400;
-    background-color: #68d391;
+    background-color: #ffb300;
 }
 </style>
