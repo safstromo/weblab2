@@ -13,7 +13,7 @@ function deleteTask(taskToDelete: Task) {
 <template>
   <ul class="flex flex-row justify-center flex-wrap w-full">
     <li v-show="!taskStore.filterTasks"
-      class="box-border flex m-2 w-80 bg-white border border-black rounded-md shadow-md dark:bg-gray-900 dark:text-white dark:shadow-amber-600 md:max-h-none max-h-20"
+      class="box-border flex m-2 w-80 bg-white border border-x-cyan-600 rounded-md shadow-md shadow-cyan-600 dark:border-black dark:bg-gray-900 dark:text-white dark:shadow-amber-600 md:max-h-none max-h-20"
       v-for="task in taskStore.tasks" :key="task.id">
       <router-link :to="{ name: 'task', params: { taskId: task.id } }">
         <div class="textbox flex h-auto max-h-20 flex-col items-center md:max-h-none">
@@ -28,7 +28,7 @@ function deleteTask(taskToDelete: Task) {
       </button>
     </li>
     <li
-      class="box-border flex m-2 w-80 bg-white border border-black rounded-md shadow-md dark:bg-gray-900 dark:text-white dark:shadow-amber-600"
+      class="box-border flex m-2 w-80 bg-white border border-black rounded-md shadow-md shadow-cyan-600 dark:bg-gray-900 dark:text-white dark:shadow-amber-600"
       v-show="taskStore.filterTasks" v-for="task in taskStore.getIncomplete" :key="task.id">
       <router-link :to="{ name: 'task', params: { taskId: task.id } }">
         <div class="textbox flex max-h-20 flex-col items-center md:max-h-none">

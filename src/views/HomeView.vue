@@ -10,7 +10,7 @@ const taskStore = useTaskStore();
     <div class="flex flex-col justify-items-center items-center p-2">
         <PercentCircle :tasks="taskStore.tasks" />
         <div
-            class="container border-2 rounded-t-lg shadow-inner shadow-black dark:border-black dark:shadow-amber-600"
+            class="container border-2 rounded-t-lg shadow-inner shadow-cyan-600 dark:border-black dark:shadow-amber-600"
         >
             <DoneButton />
             <TaskTile />
